@@ -1,0 +1,90 @@
+
+
+:root {
+    --main-color:white;
+    --second-color:#3fa2f7;
+    --button-color:#7FF21A;
+    --text-color:white;
+;
+}
+    
+
+
+    
+
+  
+
+header{
+    margin-top: 200px;
+    justify-content: center;
+    display: flex;
+   
+   
+    
+ 
+}
+
+.Discription{
+
+    color: white;
+    justify-content: center;
+    height: 50px;
+    display:flex;
+  padding: 7px;
+    width: 50%;
+    background-color: var(--button-color);
+    
+}
+body{
+
+    background-color: var(--main-color);}
+
+
+
+
+.parent-box{
+    
+    
+    display: flex;
+    justify-content: center;
+}
+
+
+.box{
+   
+    background-color: var(--second-color);
+    width: 50%;
+    height: 300px;
+    border:solid black;
+}
+    
+   
+
+
+.parent-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    height: 50px;
+   
+}
+button{
+    width: 50%;
+    background-color: var(--button-color);
+    color: white;
+ border: none;
+}
+
+ 
+
+
+
+    
+
+    
+
+    
+    
+
+
+
