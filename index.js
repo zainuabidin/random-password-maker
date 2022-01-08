@@ -1,50 +1,36 @@
-var upperCase = [];
-var items = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
-var symbol = [];
-var numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 
-// This function invoke when click me button password
+
+
+// This function invoke when click me button password on webpage
 function passwordCreator() {
-  var passwordChoice = prompt(
-    "please choose a password length of at least 8 characters and no more than 128 characters"
+  var passwordChoice =prompt
+    ("please choose a password length of at least 8 characters and no more than 128 characters"
   );
-// conditional statments with three branchers to validate the password  within the function
+// conditional statments with two  branchers to validate the password is a number ,<8 and >128 and not blank
   if (passwordChoice > 8 && passwordChoice < 128) {
-    alert("working");
-  } else if ((passwordChoice = isNaN || passwordChoice !== Number)) {
-    alert("please enter a valid number ");
-  } else {
-    alert("please enter the password between 8 and 128 characters.");
-  }
+    alert("☺️ Thanks for confirming the password lenght ✅ ✅ \n Please press OK to proceed ")
+  } 
+  else if ((passwordChoice = isNaN || passwordChoice !== Number)) {
+    alert("    😔 Something does not seems right ❌ \n ☑ Please check the password lenght is correct \n ☑ you enter the valid number");
+  } 
+  
+  //Defining variables for password choices 
+  var numeric =("0123456789");
+  var symbols=("!@#$%^&*()_+~\\`|}{[]:;?><,./-=");
+  var lowerCase=("abcdefghijklmnopqrstuvwxyz");
+  var upperCase=("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+
+  
+
+
+
+
+
+
+
 }
+
 
 
 
