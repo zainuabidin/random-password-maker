@@ -1,35 +1,36 @@
 
+//   // var numeric =("0123456789");
+//   // var symbols=("!@#$%^&*()_+~\\`|}{[]:;?><,./-=");
+//   // var lowerCase=("abcdefghijklmnopqrstuvwxyz");
+//   // var upperCase=("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 
 
-
-// This function invoke when click me button password on webpage
-function passwordCreator() {
-  var passwordChoice =prompt
-    ("please choose a password length of at least 8 characters and no more than 128 characters"
-  );
-// conditional statments with two  branchers to validate the password is a number ,<8 and >128 and not blank
-  if (passwordChoice > 8 && passwordChoice < 128) {
-    alert("☺️ Thanks for confirming the password lenght ✅ ✅ \n Please press OK to proceed ")
-  } 
-  else if ((passwordChoice = isNaN || passwordChoice !== Number)) {
-    alert("    😔 Something does not seems right ❌ \n ☑ Please check the password lenght is correct \n ☑ you enter the valid number");
-  } 
+// // This function invoke when click me button password on webpage
+// function passwordCreator() {
+//   var passwordChoice =prompt
+//     ("please choose a password length of at least 8 characters and no more than 128 characters"
+//   );
+// // conditional statments with two  branchers to validate the password is a number ,<8 and >128 and not blank
+//   if (passwordChoice > 8 && passwordChoice < 128) {
+//     alert("☺️ Thanks for confirming the password lenght ✅ ✅ \n Please press OK to proceed ")
+//   } 
+//   else if ((passwordChoice = isNaN || passwordChoice !== Number)) {
+//     alert("    😔 Something does not seems right ❌ \n ☑ Please check the password lenght is correct \n ☑ you enter the valid number");
   
-  //Defining variables for password choices 
-  var numeric =("0123456789");
-  var symbols=("!@#$%^&*()_+~\\`|}{[]:;?><,./-=");
-  var lowerCase=("abcdefghijklmnopqrstuvwxyz");
-  var upperCase=("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-
+// return;}
   
+  // //Defining variables for password choices 
+  var numeric = confirm("Would you like to add numerics in your password")
+  if (numeric==true)
+  {
+    alert("working")
+    }
 
 
 
 
+//using conditional statements to obtain user password choice
 
-
-
-}
 
 
 
