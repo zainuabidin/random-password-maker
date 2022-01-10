@@ -1,7 +1,6 @@
 // // This function invoke when click me button password on webpage
 
 function passwordCreator() {
-  var passGenerator = "";
   const object = {
     lowercase: "abcdefghijklmnopqrstuvwxyz",
     uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -9,15 +8,20 @@ function passwordCreator() {
     symbols: "~`!@#$%^&*()_-+={[}]|:;'<,>.?/",
   };
 
-  var passwordChoice = window.prompt(
+  let lengthchoice = "";
+  let characterchoice = "";
+
+  lengthchoice = window.prompt(
     "please choose a password length of at least 8 characters and no more than 128 characters"
   );
+
+  console.log(passwordChoice);
   // conditional statements with two  branches to validate the password is a number ,<8 and >128 and not blank
-  if (passwordChoice > 7 && passwordChoice < 129) {
+  if (lengthchoice > 7 && lengthchoice < 129) {
     window.alert(
       "☺️ Thanks for confirming the password length ✅ ✅ \n Please press OK to proceed "
     );
-  } else if ((passwordChoice = isNaN || passwordChoice !== Number)) {
+  } else if ((lengthchoice = isNaN || lengthchoice !== Number)) {
     window.alert(
       "    😔 Something does not seems right ❌ \n ☑ Please check the password length is correct \n ☑ you enter the valid number"
     );
@@ -25,16 +29,16 @@ function passwordCreator() {
     return;
   }
 
-  var numerics = window.confirm(
+  let numerics = window.confirm(
     "would you like to add numbers in your password"
   );
-  var symbols = window.confirm(
+  let symbols = window.confirm(
     "would you like to add symbols in  your password"
   );
-  var lowerCase = window.confirm(
+  let lowerCase = window.confirm(
     "would you like to add lowercase characters in your password"
   );
-  var upperCase = window.confirm(
+  let upperCase = window.confirm(
     "would you like to add capitals  in your password"
   );
 
@@ -44,25 +48,26 @@ function passwordCreator() {
   }
 
   if (numerics == true) {
-    passGenerator = passGenerator + object.numbers;
+    characterchoice = characterchoice + object.numbers;
   }
 
   if (symbols == true) {
-    passGenerator = passGenerator + object.symbols;
+    characterchoice = characterchoice + object.symbols;
   }
 
   if (lowerCase == true) {
-    passGenerator = passGenerator + object.lowerCase;
+    characterchoice = characterchoice + object.lowerCase;
   }
 
   if (upperCase == true) {
-    passGenerator = passGenerator + object.uppercase;
+    characterchoice = characterchoice + object.uppercase;
 
-    console.log(passGenerator);
+    console.log(characterchoice);
   }
-  var password = "";
-  for (let i = 0; i < length; i++) {
-    password += passGenerator[Math.floor(Math.random() * passGenerator.length)];
+  let password = "";
+  for (let i = 0; i < lengthchoice; i++) {
+    password +=
+      characterchoice[Math.floor(Math.random() * characterchoice.length)];
     console.log(password);
 
     return password;
