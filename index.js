@@ -1,12 +1,12 @@
 // // This function invoke when click me button password on webpage
-
+const object = {
+  lowercase: "abcdefghijklmnopqrstuvwxyz",
+  uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  numbers: "0123456789",
+  symbols: "~`!@#$%^&*()_-+={[}]|:;'<,>.?/",
+};
 function passwordCreator() {
-  const object = {
-    lowercase: "abcdefghijklmnopqrstuvwxyz",
-    uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    numbers: "0123456789",
-    symbols: "~`!@#$%^&*()_-+={[}]|:;'<,>.?/",
-  };
+  
 
   let lengthchoice = "";
   let characterchoice = "";
@@ -15,7 +15,7 @@ function passwordCreator() {
     "please choose a password length of at least 8 characters and no more than 128 characters"
   );
 
-  console.log(passwordChoice);
+ 
   // conditional statements with two  branches to validate the password is a number ,<8 and >128 and not blank
   if (lengthchoice > 7 && lengthchoice < 129) {
     window.alert(
