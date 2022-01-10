@@ -1,58 +1,73 @@
-// variablers been declared using assignment operators
-// var numeric ="0123456789";
-// var symbols="!@#$%^&*()_+~\\`|}{[]:;?><,./-=";
-// var lowerCase="abcdefghijklmnopqrstuvwxyz";
-// var upperCase="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-// var passGen='';
-
 // // This function invoke when click me button password on webpage
+
 function passwordCreator() {
-  // var passGen=''
-  // var numeric ="0123456789";
-  // var symbols="!@#$%^&*()_+~\\`|}{[]:;?><,./-=";
-  // var lowerCase="abcdefghijklmnopqrstuvwxyz";
-  // var upperCase="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var passwordChoice = prompt(
+  var passGenerator = "";
+  const object = {
+    lowercase: "abcdefghijklmnopqrstuvwxyz",
+    uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    numbers: "0123456789",
+    symbols: "~`!@#$%^&*()_-+={[}]|:;'<,>.?/",
+  };
+
+  var passwordChoice = window.prompt(
     "please choose a password length of at least 8 characters and no more than 128 characters"
   );
   // conditional statements with two  branches to validate the password is a number ,<8 and >128 and not blank
   if (passwordChoice > 7 && passwordChoice < 129) {
-    alert(
+    window.alert(
       "☺️ Thanks for confirming the password length ✅ ✅ \n Please press OK to proceed "
     );
   } else if ((passwordChoice = isNaN || passwordChoice !== Number)) {
-    alert(
+    window.alert(
       "    😔 Something does not seems right ❌ \n ☑ Please check the password length is correct \n ☑ you enter the valid number"
     );
-    console.log(passwordChoice);
+
     return;
   }
 
-  // conditional statements for user to choose character type
-  var passGen = "";
-
-  var numeric = confirm(
-    "Would you like to add lowerCase in your password\npress ok to add and cancel to ignore"
+  var numerics = window.confirm(
+    "would you like to add numbers in your password"
   );
-  if (numeric == 1) {
-    passGen = passGen + "0123456789";
+  var symbols = window.confirm(
+    "would you like to add symbols in  your password"
+  );
+  var lowerCase = window.confirm(
+    "would you like to add lowercase characters in your password"
+  );
+  var upperCase = window.confirm(
+    "would you like to add capitals  in your password"
+  );
+
+  if (!numerics && !symbols && !lowerCase && !upperCase) {
+    window.alert("you must choose at least one character type");
+    return;
   }
 
-  var lowerCase = confirm("Would you like to add lowerCase in your password");
-  if (lowerCase == 1) {
-    passGen = passGen + "abcdefghijklmnopqrstuvwxyz";
-  }
-  var upperCase = confirm("Would you like to add upperCase in your password");
-  if ((upperCase = 1)) {
-    passGen = passGen + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  }
-  var symbols = confirm("Would you like to add symbols in your password");
-  if (symbols == 1) {
-    passGen = passGen + "!@#$%^&*()_+~\\`|}{[]:;?><,./-=";
-    console.log(passGen);
+  if (numerics == true) {
+    passGenerator = passGenerator + object.numbers;
   }
 
-  if (numeric == 0 && lowerCase == 0 && upperCase == 0 && symbols == 0) {
-    alert("You must select at least one character type");
+  if (symbols == true) {
+    passGenerator = passGenerator + object.symbols;
   }
+
+  if (lowerCase == true) {
+    passGenerator = passGenerator + object.lowerCase;
+  }
+
+  if (upperCase == true) {
+    passGenerator = passGenerator + object.uppercase;
+
+    console.log(passGenerator);
+  }
+  var password = "";
+  for (let i = 0; i < length; i++) {
+    password += passGenerator[Math.floor(Math.random() * passGenerator.length)];
+    console.log(password);
+
+    return password;
+  }
+  console.log(password);
+
+  document.getElementById("password").innerHTML = password;
 }
