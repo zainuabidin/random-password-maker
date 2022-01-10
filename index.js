@@ -70,7 +70,7 @@ function passwordCreator() {
       characterchoice[Math.floor(Math.random() * characterchoice.length)];
     console.log(password);
 
-    return password;
+    
   }
   console.log(password);
 
