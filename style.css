@@ -26,18 +26,18 @@ header{
 
 .Discription{
 
-    color: white;
+    color:black;
     justify-content: center;
     height: 50px;
     display:flex;
   padding: 7px;
     width: 50%;
-    background-color: var(--button-color);
+   
     
 }
 body{
 
-    background-color: var(--main-color);}
+    background-color:var(--second-color)}
 
 
 
@@ -52,10 +52,11 @@ body{
 
 .box{
    
-    background-color: var(--second-color);
+    
     width: 50%;
     height: 300px;
-    border:solid black;
+    border:dotted black;
+    font-size: 3vmax;
 }
     
    
@@ -75,7 +76,10 @@ button{
  border: none;
 }
 
- 
+ @media screen {
+     
+     
+ }
 
 
 
